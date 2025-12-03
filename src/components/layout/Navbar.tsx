@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-gradient-to-r from-accent/70 to-white shadow-sm fixed top-0 z-50">
+    <nav className="w-full bg-white shadow-sm fixed top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
@@ -31,6 +31,9 @@ export default function Navbar() {
             </Link>
             <Link href="#sobre" className="text-gray-600 hover:text-primary font-medium transition">
               Sobre
+            </Link>
+            <Link href="#depoimentos" className="text-gray-600 hover:text-primary font-medium transition">
+              Depoimentos
             </Link>
             <button className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-primary/30">
               Login
@@ -62,6 +65,7 @@ export default function Navbar() {
             <Link href="/" className="block px-3 py-2 text-gray-600 font-medium">Início</Link>
             <Link href="#servicos" className="block px-3 py-2 text-gray-600 font-medium">Serviços</Link>
             <Link href="#sobre" className="block px-3 py-2 text-gray-600 font-medium">Sobre</Link>
+            <Link href="#depoimentos" className="block px-3 py-2 text-gray-600 font-medium">Depoimentos</Link>
             <button className="mt-4 w-full bg-primary text-white px-4 py-2 rounded-md">
               Login
             </button>

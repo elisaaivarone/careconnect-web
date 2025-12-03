@@ -16,6 +16,7 @@ const config: Config = {
         },
         secondary: "#90E0EF",
         accent: "#D1DCE2",
+        background: "#F0F4F8",
       },
     },
   },
