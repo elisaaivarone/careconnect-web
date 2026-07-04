@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CareCONNECT 💙
 
-## Getting Started
+CareConnect é uma plataforma moderna e responsiva focada em conectar pacientes a profissionais de saúde (cuidadores e enfermeiros) de forma rápida, segura e intuitiva.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto foi construído com as melhores práticas e ferramentas de ponta do mercado de desenvolvimento web:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Front-end:** [Next.js 14](https://nextjs.org/) (App Router) + [React](https://react.dev/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+* **Banco de Dados & Back-end:** [Supabase](https://supabase.com/) (PostgreSQL)
+* **Autenticação:** Supabase Auth (Sistema de Login e Cadastro Seguro)
+* **Ícones:** [Lucide React](https://lucide.dev/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Funcionalidades Implementadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Até o momento, o aplicativo conta com as seguintes seções:
 
-## Learn More
+* **Landing Page:** Apresentação do serviço, depoimentos e chamadas para ação.
+* **Autenticação Real:**
+  * Login com validação de credenciais e redirecionamento de usuários.
+  * Cadastro e criação de conta com definição de perfis (Paciente ou Cuidador) e salvamento de metadados.
+* **Dashboard (App Shell):**
+  * Layout responsivo que simula a experiência de um aplicativo mobile.
+  * Menu de navegação inferior (Bottom Navigation Bar).
+  * Visão do Paciente com barra de pesquisa, rolagem horizontal de categorias de cuidado e lista de profissionais recomendados (com foto, especialidade, nota e distância).
+  * Visão do Cuidador (Estrutura base).
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Como rodar o projeto localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Siga os passos abaixo para testar o aplicativo em sua própria máquina.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**1. Clone o repositório:**
+`git clone https://github.com/SEU_USUARIO/careconnect.git`
 
-## Deploy on Vercel
+**2. Instale as dependências:**
+`npm install`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**3. Configure as Variáveis de Ambiente:**
+Crie um arquivo `.env.local` na raiz do projeto e adicione suas chaves do Supabase.
+`NEXT_PUBLIC_SUPABASE_URL=sua_project_url_aqui`
+`NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon_aqui`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**4. Inicie o servidor de desenvolvimento:**
+`npm run dev`
+
+**5. Acesse no navegador:**
+Abra `http://localhost:3000` para ver o projeto rodando.
