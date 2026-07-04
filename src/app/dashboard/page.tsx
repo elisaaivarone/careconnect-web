@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { Home, Calendar, MessageCircle, User, Search, Star, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -102,7 +103,7 @@ function PatientDashboard() {
         <h3 className="font-bold text-gray-800 mb-4 text-sm uppercase tracking-wider">Categorias de Cuidado</h3>
         {/* Usamos classes para esconder a barra de rolagem mas manter a funcionalidade */}
         <div className="flex gap-3 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          {['Idosos', 'Pós-Cirúrgico', 'Infantil', 'PCD', 'Plantão'].map((cat, index) => (
+          {['Idosos', 'Pós-Cirúrgico', 'PCD'].map((cat, index) => (
             <button 
               key={cat} 
               className={`flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-medium shadow-sm transition ${
@@ -126,6 +127,7 @@ function PatientDashboard() {
         <div className="space-y-4">
           
           {/* Card Profissional 1 */}
+        <Link href="/caregiver/1">
           <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center cursor-pointer hover:shadow-md transition">
             <img 
               src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop" 
@@ -134,19 +136,20 @@ function PatientDashboard() {
             />
             <div className="flex-1">
               <div className="flex justify-between items-start">
-                <h4 className="font-bold text-gray-800">Ana Silva</h4>
+                <h4 className="font-bold text-gray-800">Jessica Jung</h4>
                 <div className="flex items-center text-yellow-500 text-xs font-bold bg-yellow-50 px-1.5 py-0.5 rounded">
                   <Star className="w-3 h-3 fill-current mr-1" />
-                  4.9
+                  4.8
                 </div>
               </div>
-              <p className="text-xs text-primary font-medium mt-0.5">Enfermeira Especialista</p>
+              <p className="text-xs text-primary font-medium mt-0.5">Cuidadora de Idosos</p>
               <div className="flex items-center text-xs text-gray-500 mt-2">
                 <MapPin className="w-3 h-3 mr-1" />
-                A 2.5 km de você
+                A 4.5 km de você
               </div>
             </div>
           </div>
+        </Link>
 
           {/* Card Profissional 2 */}
           <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center cursor-pointer hover:shadow-md transition">
